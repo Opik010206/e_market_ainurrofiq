@@ -20,7 +20,7 @@
               <form action="pemasok/{{ $p->id }}" method="POST" style="display: inline;">
                 @csrf
                 @method('DELETE')
-                <button type="button" class="btn btn-danger btn-delete" data-nama_pemasok="{{ $p->nama_pemasok }}"><i class="bi bi-trash-fill"></i></button>
+                <button type="submit" class="btn btn-danger btn-delete" data-nama_pemasok="{{ $p->nama_pemasok }}"><i class="bi bi-trash-fill"></i></button>
               </form>
             </td>
           </tr>
