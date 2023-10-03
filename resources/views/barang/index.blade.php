@@ -67,18 +67,19 @@
 
 @push('script')
     <script>
+      console.log('index')
       // Notivikasi
-      $('.alert-success').fadeTo(2000, 500).slideUp(500, function(){
-        $(".alert-success").slideUp(500);
-      })
-      $('.alert-danger').fadeTo(2000, 500).slideUp(500, function(){
-        $(".alert-danger").slideUp(500);
-      })
+      // $('.alert-success').fadeTo(2000, 500).slideUp(500, function(){
+      //   $(".alert-success").slideUp(500);
+      // })
+      // $('.alert-danger').fadeTo(2000, 500).slideUp(500, function(){
+      //   $(".alert-danger").slideUp(500);
+      // })
 
-      $(function(){
-        $('#tbl-barang').DataTable()
+      // $(function(){
+      //   $('#tbl-barang').DataTable()
 
-      })
+      // })
 
       // dialog hapus data Sweet Alert
       $('.btn-delete').on('click', function(e){
@@ -99,6 +100,7 @@
 
       // Form Modal
       $('#formBarangModal').on('show.bs.modal', function(e){
+        console.log('halo');
         const btn = $(e.relatedTarget)
         console.log(btn.data('mode'))
         const mode = btn.data('mode')

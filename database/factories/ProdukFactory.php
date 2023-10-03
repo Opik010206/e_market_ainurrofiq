@@ -17,7 +17,7 @@ class ProdukFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'nama_produk' => fake()->name()
         ];
     }
 }

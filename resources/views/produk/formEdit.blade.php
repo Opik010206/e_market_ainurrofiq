@@ -2,7 +2,7 @@
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Isi Form</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Edit Produk</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -12,7 +12,7 @@
           @csrf
           @method("put")
             <div class="form-group row">
-                <label for="nama_produk" class="col-sm-3 col-form-label">Edit Produk</label>
+                <label for="nama_produk" class="col-sm-3 col-form-label">Nama Produk</label>
                 <div class="col-sm-9">
                     <input type="text" class="form-control nama-produk-edit" id="nama_produk" data-id-produk placeholder="Nama Produk" name="nama_produk">
                 </div>

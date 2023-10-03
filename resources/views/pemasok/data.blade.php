@@ -27,3 +27,9 @@
       @endforeach
     </tbody>
   </table>
+
+@push('script')
+  <script>
+    
+  </script>
+@endpush

@@ -68,26 +68,26 @@
 
 @push('script')
     <script>
-      // Notivikasi
-      $('.alert-success').fadeTo(2000, 500).slideUp(500, function(){
-        $(".alert-success").slideUp(500);
-      })
-      $('.alert-danger').fadeTo(10000, 500).slideUp(500, function(){
-        $(".alert-danger").slideUp(500);
-      })
+      // // Notivikasi
+      // $('.alert-success').fadeTo(2000, 500).slideUp(500, function(){
+      //   $(".alert-success").slideUp(500);
+      // })
+      // $('.alert-danger').fadeTo(10000, 500).slideUp(500, function(){
+      //   $(".alert-danger").slideUp(500);
+      // })
 
-      $(function(){
-        $('#tbl-pemasok').DataTable()
+      // $(function(){
+      //   $('#tbl-pemasok').DataTable()
+      // })
 
-      })
-
-      // dialog hapus data Sweet Alert
+      // Dialog Hapus Data
       $('.btn-delete').on('click', function(e){
-        let nama_pemasok = $(this).closest('tr').find('td:eq(0)').text();
+        // console.log('halo');
+        let nama_produk = $(this).closest('tr').find('td:eq(0)').text();
         Swal.fire({
           icon: 'error',
           title: 'Hapus Data',
-          html: `Apakah data <b>${nama_pemasok}</b> akan dihapus?`,
+          html: `Apakah data <b>${nama_produk}</b> akan dihapus?`,
           confirmButtonText: 'Ya',
           denyButtonText: 'Tidak',
           showDenyButton: true,
@@ -100,6 +100,7 @@
 
       // Form Modal
       $('#formPemasokModal').on('show.bs.modal', function(e){
+        console.log('halo');
         const btn = $(e.relatedTarget)
         console.log(btn.data('mode'))
         const mode = btn.data('mode')

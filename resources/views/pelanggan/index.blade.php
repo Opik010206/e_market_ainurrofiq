@@ -69,17 +69,17 @@
 @push('script')
     <script>
       // Notivikasi
-      $('.alert-success').fadeTo(2000, 500).slideUp(500, function(){
-        $(".alert-success").slideUp(500);
-      })
-      $('.alert-danger').fadeTo(10000, 500).slideUp(500, function(){
-        $(".alert-danger").slideUp(500);
-      })
+      // $('.alert-success').fadeTo(2000, 500).slideUp(500, function(){
+      //   $(".alert-success").slideUp(500);
+      // })
+      // $('.alert-danger').fadeTo(10000, 500).slideUp(500, function(){
+      //   $(".alert-danger").slideUp(500);
+      // })
 
-      $(function(){
-        $('#tbl-pelanggan').DataTable()
+      // $(function(){
+      //   $('#tbl-pelanggan').DataTable()
 
-      })
+      // })
 
       // dialog hapus data Sweet Alert
       $('.btn-delete').on('click', function(e){

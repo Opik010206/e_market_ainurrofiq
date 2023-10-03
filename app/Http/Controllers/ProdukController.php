@@ -27,7 +27,7 @@ class ProdukController extends Controller
         try {
             $data['produk'] = Produk::orderBy('created_at', 'DESC')->get();
         } catch (QueryException | Expectation | PDOException $error) {
-            // $this->failResponse($error->getMessage(), $error->getCode());
+            $this->failResponse($error->getMessage(), $error->getCode());
         }
         return view('produk.index')->with($data);
     }

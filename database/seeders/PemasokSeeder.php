@@ -12,6 +12,6 @@ class PemasokSeeder extends Seeder
      */
     public function run(): void
     {
-        //
+        \App\Models\Pemasok::factory(5)->create();
     }
 }

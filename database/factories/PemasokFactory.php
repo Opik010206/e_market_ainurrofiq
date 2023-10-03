@@ -17,7 +17,7 @@ class PemasokFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'nama_pemasok' => fake()->name()
         ];
     }
 }

@@ -12,6 +12,6 @@ class BarangSeeder extends Seeder
      */
     public function run(): void
     {
-        //
+        \App\Models\Barang::factory(5)->create();
     }
 }

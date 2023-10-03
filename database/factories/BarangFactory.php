@@ -17,7 +17,14 @@ class BarangFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'kode_barang' => fake()->unique()->randomNumber(5),
+            'nama_barang' => fake()->word(),
+            'satuan' => fake()->randomElement(['Pcs', 'Kg', 'Meter']),
+            'user_id' => fake()->randomElement(),
+            'produk_id' => fake()->randomElement(),
+            'ditarik' => fake()->numberBetween(1000, 10000),
+            'harga_jual' => fake()->numberBetween(1000, 10000),
+            'stok' => fake()->numberBetween(1, 100)
         ];
     }
 }

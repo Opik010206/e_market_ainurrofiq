@@ -27,3 +27,29 @@
       @endforeach
     </tbody>
 </table>
+
+@push('script')
+  <script>
+    // Data Table
+    $(function(){
+      $('#tbl-produk').DataTable();
+    })
+    // Dialog Hapus Data
+    $('.btn-delete').on('click', function(e){
+      console.log('halo');
+      let nama_produk = $(this).closest('tr').find('td:eq(0)').text();
+      Swal.fire({
+        icon: 'error',
+        title: 'Hapus Data',
+        html: `Apakah data <b>${nama_produk}</b> akan dihapus?`,
+        confirmButtonText: 'Ya',
+        denyButtonText: 'Tidak',
+        showDenyButton: true,
+        focusConfirm: false
+      }).then((result) => {
+        if (result.isConfirmed) $(e.target).closest('form').submit()
+        else swal.close()
+      })
+    })
+  </script>
+@endpush

@@ -79,25 +79,6 @@
         $(".alert-danger").slideUp(500);
       })
 
-      $(function(){
-        $('#tbl-produk').DataTable()
-
-      })
-      // dialog hapus data
-      $('.btn-delete').on('click', function(e){
-        let nama_produk = $(this).closest('tr').find('td:eq(0)').text();
-        Swal.fire({
-          icon: 'error',
-          title: 'Hapus Data',
-          html: `Apakah data <b>${nama_produk}</b> akan dihapus?`,
-          confirmButtonText: 'Ya',
-          denyButtonText: 'Tidak',
-          showDenyButton: true,
-          focusConfirm: false
-        }).then((result) => {
-          if (result.isConfirmed) $(e.target).closest('form').submit()
-          else swal.close()
-        })
-      })
+      
     </script>
 @endpush
