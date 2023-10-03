@@ -5,8 +5,8 @@ namespace App\Http\Controllers;
 use App\Exports\ProdukExport;
 use Maatwebsite\Excel\Facades\Excel;
 use App\Models\Produk;
-use App\Http\Requests\StoreprodukRequest;
-use App\Http\Requests\UpdateprodukRequest;
+use App\Http\Requests\StoreProdukRequest;
+use App\Http\Requests\UpdateProdukRequest;
 use Exception;
 use GuzzleHttp\Psr7\Query;
 use Illuminate\Database\QueryException;
@@ -101,7 +101,7 @@ class ProdukController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(produk $produk)
+    public function destroy(Produk $produk)
     {
         try {
             $produk->delete();
